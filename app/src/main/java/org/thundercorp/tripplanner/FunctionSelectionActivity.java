@@ -24,11 +24,9 @@ public class FunctionSelectionActivity extends AppCompatActivity implements View
         btnAddTrip.setOnClickListener(this::onClick);
         btnRunQueries.setOnClickListener(this::onClick);
 
+        //TODO
         //run any query from app
-        //not implementing
         btnRunQueries.setVisibility(View.INVISIBLE);
-
-
     }
 
     @Override

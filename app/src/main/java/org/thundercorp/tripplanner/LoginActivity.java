@@ -1,7 +1,6 @@
 package org.thundercorp.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,8 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
+
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,15 +17,9 @@ import com.google.android.material.snackbar.Snackbar;
 import org.thundercorp.tripplanner.DataModels.User;
 
 import java.util.HashMap;
-
-import okhttp3.internal.Util;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,14 +33,10 @@ public class LoginActivity extends AppCompatActivity {
 
     boolean isLoggedIn = false; //to prevent auto opening trip activity; allow coming back to login
 
-
-
     EditText edtTxtEmail, edtTxtPassword;
     Button btnLogin;
     Snackbar infoSnackBar;
     Toast infoToast;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         edtTxtPassword = findViewById(R.id.editText_pw);
         btnLogin = findViewById(R.id.button_login);
 
-
-
         infoSnackBar = Snackbar.make((View)(btnLogin), "", Snackbar.LENGTH_SHORT);
         infoToast = Toast.makeText(LoginActivity.this, "", Toast.LENGTH_LONG);
-
-
-
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,8 +68,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     @Override

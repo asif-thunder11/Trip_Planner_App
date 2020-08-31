@@ -6,18 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.webkit.HttpAuthHandler;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.thundercorp.tripplanner.DataModels.Expense;
@@ -47,7 +42,6 @@ public class TripsListActivity extends AppCompatActivity implements MyRecyclerAd
     Toast infoToast;
 
     ArrayList<TripItem> tripItems = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,7 +173,6 @@ public class TripsListActivity extends AppCompatActivity implements MyRecyclerAd
                         infoToast.setText("Bad Request\nVerify Data");
                         infoToast.show();
                     }
-
                 }
 
                 @Override
@@ -257,6 +250,5 @@ public class TripsListActivity extends AppCompatActivity implements MyRecyclerAd
         }))
         .setNeutralButton("Cancel", null)
         .show();
-
     }
 }

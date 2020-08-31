@@ -1,15 +1,14 @@
 package org.thundercorp.tripplanner;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.media.tv.TvContract;
 import android.util.Log;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//for simplicity
 public class Utils {
     public static String TAG = "[Utils]->";
 

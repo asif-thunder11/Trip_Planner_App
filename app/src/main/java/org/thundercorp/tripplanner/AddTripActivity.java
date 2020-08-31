@@ -30,7 +30,6 @@ public class AddTripActivity extends AppCompatActivity {
 
     Button btnCreateTrip;
     EditText edtName, edtPackage, edtRoute, edtStartDate, edtEndDate, edtTravellerIDs;
-    TextView txtStartDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,6 @@ public class AddTripActivity extends AppCompatActivity {
         edtEndDate = findViewById(R.id.editText_end_date);
         edtTravellerIDs = findViewById(R.id.editText_travellers_id);
         btnCreateTrip = findViewById(R.id.button_create_trip);
-
 
         toast = Toast.makeText(AddTripActivity.this, "", Toast.LENGTH_LONG);
         snackbar = Snackbar.make( (View) (btnCreateTrip), "",Snackbar.LENGTH_SHORT);
@@ -95,6 +93,5 @@ public class AddTripActivity extends AppCompatActivity {
             });
 
         });
-
     }
 }

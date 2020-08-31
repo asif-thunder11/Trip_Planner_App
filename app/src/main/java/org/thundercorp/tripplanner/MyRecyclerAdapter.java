@@ -12,12 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.thundercorp.tripplanner.DataModels.TripItem;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Response;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder> {
 
@@ -25,8 +20,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     private List<TripItem> tripItems;
     private RecylerViewClickListener recylerViewClickListener;
-
-
 
     public MyRecyclerAdapter(List<TripItem> tripItems){
         this.tripItems = tripItems;
@@ -55,9 +48,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         details += "\nTrip Package: " + currentItem.getTrip_package();
         details += "\nFrom: " + currentItem.getFrom();
         details += "\nTo: " + currentItem.getTo();
-
-        //DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
-
         details += "\nStart Date: " + currentItem.getStart_date();
         details += "\nEnd Date: " + currentItem.getEnd_date();
         details += "\nDuration: " + currentItem.getDuration() + " Months";
@@ -70,7 +60,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     public int getItemCount() {
         return tripItems.size();
     }
-
 
     public interface RecylerViewClickListener{
         void showTravellers(int pos);
